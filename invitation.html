@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Private Invitation | Dolly Parton</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        Dolly
+
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+
+        ☰
+
+    </button>
+
+    <nav id="mainNav">
+
+        <a href="index.html">Home</a>
+
+        <a href="story.html">Her Story</a>
+
+        <a href="donation.html">Donations</a>
+
+        <a href="invitation.html">
+
+            Private Invitation
+
+        </a>
+
+    </nav>
+
+</header>
+
+    <!-- PAGE HERO -->
+
+    <section class="page-hero">
+
+        <div>
+
+            <p class="section-label">
+
+                PRIVATE CEREMONY
+
+            </p>
+
+            <h1>Funeral Invitation</h1>
+
+            <p>
+
+                An invitation is required for attendance.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <main>
+
+        <!-- INTRO -->
+
+        <section class="invitation-intro">
+
+            <p class="section-label">
+
+                PRIVATE FUNERAL
+
+            </p>
+
+            <h2>Join Us in Remembering Dolly</h2>
+
+            <p>
+
+                The funeral ceremony will be held privately in honour
+
+                of Dolly Parton. Guests wishing to attend are required
+
+                to obtain an official invitation.
+
+            </p>
+
+            <p>
+
+                Funeral details, including the date and venue, will be
+
+                shared with confirmed guests.
+
+            </p>
+
+        </section>
+
+        <!-- PAYMENT OPTIONS -->
+
+        <section class="invitation-payment">
+
+            <div class="invitation-card">
+
+                <p class="section-label">
+
+                    INVITATION FEE
+
+                </p>
+
+                <h2>$2500</h2>
+
+                <p class="fee-description">
+
+                    Choose how you would like to make your payment.
+
+                </p>
+
+                <!-- FULL PAYMENT -->
+
+                <label class="payment-option">
+
+                    <input
+
+                        type="radio"
+
+                        name="paymentOption"
+
+                        value="full"
+
+                        checked
+
+                        onchange="selectPaymentOption()"
+
+                    >
+
+                    <span>
+
+                        <strong>Pay in Full</strong>
+
+                        <small>
+
+                            Pay the complete invitation fee of $2500
+
+                        </small>
+
+                    </span>
+
+                </label>
+
+                <!-- PART PAYMENT -->
+
+                <label class="payment-option">
+
+                    <input
+
+                        type="radio"
+
+                        name="paymentOption"
+
+                        value="part"
+
+                        onchange="selectPaymentOption()"
+
+                    >
+
+                    <span>
+
+                        <strong>Make a Part Payment</strong>
+
+                        <small>
+
+                            Pay any amount toward the $2500 invitation fee
+
+                        </small>
+
+                    </span>
+
+                </label>
+
+                <!-- PART PAYMENT INPUT -->
+
+                <div
+
+                    class="part-payment-input"
+
+                    id="partPaymentBox"
+
+                    style="display: none;"
+
+                >
+
+                    <label for="partPaymentAmount">
+
+                        Enter Amount
+
+                    </label>
+
+                    <div class="amount-input">
+
+                        <span>$</span>
+
+                        <input
+
+                            type="number"
+
+                            id="partPaymentAmount"
+
+                            placeholder="0.00"
+
+                            min="0.01"
+
+                            max="2499.99"
+
+                            step="0.01"
+
+                        >
+
+                    </div>
+
+                    <small>
+
+                        Maximum part payment before full payment:
+
+                        $2499.99
+
+                    </small>
+
+                </div>
+
+                <button
+
+                    type="button"
+
+                    class="btn primary invitation-btn"
+
+                    onclick="continueInvitationPayment()"
+
+                >
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- PAYMENT DETAILS -->
+
+        <section
+
+            class="payment-section"
+
+            id="invitationPayment"
+
+            style="display: none;"
+
+        >
+
+            <div class="payment-card">
+
+                <p class="section-label">
+
+                    PAYMENT DETAILS
+
+                </p>
+
+                <h2>Complete Your Payment</h2>
+
+                <p>
+
+                    Amount to pay:
+
+                    <strong id="invitationAmount">
+
+                        $2500.00
+
+                    </strong>
+
+                </p>
+
+                <div class="bitcoin-box">
+
+                    <h3>bc1q0chtkmrkww2xkcg45u3elja6v4v80tu3e3242f</h3>
+
+                    <p class="bitcoin-note">
+
+                        Send the equivalent amount in Bitcoin to the
+
+                        address below.
+
+                    </p>
+
+                    <div class="bitcoin-address">
+
+                        <span id="invitationBitcoinAddress">
+
+                            bc1q0chtkmrkww2xkcg45u3elja6v4v80tu3e3242f
+
+                        </span>
+
+                        <button
+
+                            type="button"
+
+                            onclick="copyInvitationBitcoinAddress()"
+
+                        >
+
+                            Copy
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <p class="payment-note">
+
+                    After making your payment, keep your Bitcoin
+
+                    transaction ID/hash for confirmation.
+
+                </p>
+
+                <a
+
+                    href="#invitationConfirmation"
+
+                    class="btn secondary-dark"
+
+                >
+
+                    Continue to Confirmation
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- CONFIRMATION -->
+
+        <section
+
+            class="confirmation-section"
+
+            id="invitationConfirmation"
+
+        >
+
+            <div class="confirmation-card">
+
+                <p class="section-label">
+
+                    PAYMENT CONFIRMATION
+
+                </p>
+
+                <h2>Confirm Your Payment</h2>
+
+                <p>
+
+                    Please provide your details after making your
+
+                    payment. Your invitation will be confirmed after
+
+                    the payment has been verified.
+
+                </p>
+
+                <form id="invitationForm">
+
+                    <div class="form-group">
+
+                        <label for="guestName">
+
+                            Full Name
+
+                        </label>
+
+                        <input
+
+                            type="text"
+
+                            id="guestName"
+
+                            placeholder="Enter your full name"
+
+                            required
+
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="guestEmail">
+
+                            Email Address
+
+                        </label>
+
+                        <input
+
+                            type="email"
+
+                            id="guestEmail"
+
+                            placeholder="Enter your email address"
+
+                            required
+
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="guestTransaction">
+
+                            Bitcoin Transaction ID
+
+                        </label>
+
+                        <input
+
+                            type="text"
+
+                            id="guestTransaction"
+
+                            placeholder="Enter your transaction ID"
+
+                            required
+
+                        >
+
+                    </div>
+
+                    <button
+
+                        type="submit"
+
+                        class="btn primary"
+
+                    >
+
+                        Submit Payment
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            In loving memory of Dolly Parton
+
+        </p>
+
+        <p>
+
+            1946 — 2026
+
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

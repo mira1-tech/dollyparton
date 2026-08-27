@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donations | Dolly Parton</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        Dolly
+
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+
+        ☰
+
+    </button>
+
+    <nav id="mainNav">
+
+        <a href="index.html">Home</a>
+
+        <a href="story.html">Her Story</a>
+
+        <a href="donation.html">Donations</a>
+
+        <a href="invitation.html">
+
+            Private Invitation
+
+        </a>
+
+    </nav>
+
+</header>
+    <!-- PAGE HERO -->
+
+    <section class="page-hero">
+
+        <div>
+
+            <p class="section-label">IN HER MEMORY</p>
+
+            <h1>Support the Family</h1>
+
+            <p>
+
+                Your kindness and support are deeply appreciated.
+
+            </p>
+
+        </div>
+
+    </section>
+    <section class="donation-photo">
+        <img src="images/photo6.jpeg" alt="Dolly Parton">
+
+    </section>
+
+    <!-- DONATION SECTION -->
+
+    <main>
+
+        <section class="donation-section">
+
+            <div class="donation-intro">
+
+                <p class="section-label">
+
+                    MAKE A CONTRIBUTION
+
+                </p>
+
+                <h2>Give in Her Memory</h2>
+
+                <p>
+
+                    Friends, family, fans and well-wishers who wish to
+
+                    support the family may make a contribution in memory
+
+                    of Dolly.
+
+                </p>
+
+                <p>
+
+                    Every contribution, regardless of size, is sincerely
+
+                    appreciated.
+
+                </p>
+
+            </div>
+
+            <!-- DONATION FORM -->
+
+            <div class="donation-card">
+
+                <h3>Donation Amount</h3>
+
+                <p class="currency-label">
+
+                    USD ($)
+
+                </p>
+
+                <div class="amount-input">
+
+                    <span>$</span>
+
+                    <input
+
+                        type="number"
+
+                        id="donationAmount"
+
+                        placeholder="0.00"
+
+                        min="1"
+
+                        step="0.01"
+
+                    >
+
+                </div>
+
+                <button
+
+                    type="button"
+
+                    class="btn primary donation-btn"
+
+                    onclick="showDonationPayment()">
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- PAYMENT SECTION -->
+
+        <section
+
+            class="payment-section"
+
+            id="donationPayment"
+
+            style="display: none;">
+
+            <div class="payment-card">
+
+                <p class="section-label">
+
+                    PAYMENT
+
+                </p>
+
+                <h2>Complete Your Contribution</h2>
+
+                <p>
+
+                    Donation amount:
+
+                    <strong id="displayDonationAmount">$0.00</strong>
+
+                </p>
+
+                <div class="bitcoin-box">
+
+                    <h3>Bitcoin Payment Address</h3>
+
+                    <p class="bitcoin-note">
+
+                        Please send the exact amount through your
+
+                        Bitcoin wallet.
+
+                    </p>
+
+                    <div class="bitcoin-address">
+
+                        <span id="bitcoinAddress">
+
+                            Bitcoin address will be added here
+
+                        </span>
+
+                        <button
+
+                            type="button"
+
+                            onclick="copyBitcoinAddress()">
+
+                            Copy
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <p class="payment-note">
+
+                    After completing your payment, please keep your
+
+                    transaction ID for confirmation.
+
+                </p>
+
+                <a
+
+                    href="#confirmation"
+
+                    class="btn secondary-dark">
+
+                    Submit Payment Details
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- PAYMENT CONFIRMATION -->
+
+        <section
+
+            class="confirmation-section"
+
+            id="confirmation">
+
+            <div class="confirmation-card">
+
+                <p class="section-label">
+
+                    PAYMENT CONFIRMATION
+
+                </p>
+
+                <h2>Submit Your Payment</h2>
+
+                <p>
+
+                    Please provide your details after making your
+
+                    contribution so that the payment can be confirmed.
+
+                </p>
+
+                <form id="donationForm">
+
+                    <div class="form-group">
+
+                        <label for="donorName">
+
+                            Full Name
+
+                        </label>
+
+                        <input
+
+                            type="text"
+
+                            id="donorName"
+
+                            placeholder="Enter your name"
+
+                            required
+
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="donorEmail">
+
+                            Email Address
+
+                        </label>
+
+                        <input
+
+                            type="email"
+
+                            id="donorEmail"
+
+                            placeholder="Enter your email"
+
+                            required
+
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="transactionId">
+
+                            Bitcoin Transaction ID
+
+                        </label>
+
+                        <input
+
+                            type="text"
+
+                            id="transactionId"
+
+                            placeholder="Enter your transaction ID"
+
+                            required
+
+                        >
+
+                    </div>
+
+                    <button
+
+                        type="submit"
+
+                        class="btn primary">
+
+                        Submit Confirmation
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            In loving memory of Dolly Parton
+
+        </p>
+
+        <p>
+
+            1946 — 2026
+
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

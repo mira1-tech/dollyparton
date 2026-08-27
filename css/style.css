@@ -1,0 +1,1765 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background: #f8f6f2;
+
+    color: #292621;
+
+    line-height: 1.7;
+
+}
+
+/* =========================
+
+   NAVBAR
+
+========================= */
+
+.navbar {
+
+    height: 75px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: rgba(248, 246, 242, 0.97);
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    z-index: 10;
+
+}
+
+.logo {
+
+    text-decoration: none;
+
+    color: #292621;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    font-family: Georgia, serif;
+
+}
+
+.navbar nav {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+.navbar nav a {
+
+    text-decoration: none;
+
+    color: #292621;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+.navbar nav a:hover,
+
+.navbar nav a.active {
+
+    color: #96724d;
+
+}
+
+/* =========================
+
+   HERO
+
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    background-image:
+
+        url("../images/dolly-hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+
+            rgba(20, 18, 16, 0.48),
+
+            rgba(20, 18, 16, 0.68)
+
+        );
+
+}
+
+.hero-content {
+
+    position: relative;
+
+    max-width: 750px;
+
+    padding: 30px;
+
+}
+
+.eyebrow {
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+.hero h1 {
+
+    font-size: clamp(55px, 9vw, 105px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+    font-weight: normal;
+
+}
+
+.dates {
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+}
+
+.hero-text {
+
+    max-width: 580px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+}
+
+/* =========================
+
+   BUTTONS
+
+========================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+.btn {
+
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    text-decoration: none;
+
+    border-radius: 3px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+
+}
+
+.btn.primary {
+
+    background: #96724d;
+
+    color: white;
+
+}
+
+.btn.primary:hover {
+
+    background: #7c5c3d;
+
+}
+
+.btn.secondary {
+
+    border: 1px solid white;
+
+    color: white;
+
+}
+
+.btn.secondary:hover {
+
+    background: white;
+
+    color: #292621;
+
+}
+
+/* =========================
+
+   INTRO
+
+========================= */
+
+.intro {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+.intro-image img {
+
+    width: 100%;
+
+    display: block;
+
+    max-height: 550px;
+
+    object-fit: cover;
+
+}
+
+.section-label {
+
+    color: #96724d;
+
+    letter-spacing: 3px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+
+}
+
+.intro-text h2,
+
+.legacy h2 {
+
+    font-size: 46px;
+
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+}
+
+.intro-text p {
+
+    margin-bottom: 18px;
+
+    color: #625e58;
+
+}
+
+.text-link {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #96724d;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+}
+
+/* =========================
+
+   LEGACY
+
+========================= */
+
+.legacy {
+
+    padding: 100px 7%;
+
+    text-align: center;
+
+    background: #ebe6de;
+
+}
+
+.legacy-grid {
+
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+.legacy-card {
+
+    background: #f8f6f2;
+
+    padding: 40px 30px;
+
+    text-align: left;
+
+}
+
+.legacy-card span {
+
+    color: #96724d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+}
+
+.legacy-card h3 {
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin: 15px 0;
+
+}
+
+.legacy-card p {
+
+    color: #625e58;
+
+}
+
+/* =========================
+
+   CLOSING
+
+========================= */
+
+.closing {
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+}
+
+.closing p {
+
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    font-size: 27px;
+
+    font-style: italic;
+
+}
+
+/* =========================
+
+   FOOTER
+
+========================= */
+
+footer {
+
+    padding: 30px;
+
+    background: #292621;
+
+    color: #ddd;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+}
+
+footer p:first-child {
+
+    margin-bottom: 5px;
+
+}
+
+/* =========================
+
+   MOBILE
+
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+    .navbar nav {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .navbar nav a {
+
+        font-size: 12px;
+
+    }
+
+    .hero {
+
+        min-height: 90vh;
+
+    }
+
+    .hero h1 {
+
+        font-size: 60px;
+
+    }
+
+    .dates {
+
+        font-size: 14px;
+
+    }
+
+    .hero-text {
+
+        font-size: 16px;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .btn {
+
+        width: 220px;
+
+        text-align: center;
+
+    }
+
+    .intro {
+
+        grid-template-columns: 1fr;
+
+        padding: 70px 7%;
+
+        gap: 40px;
+
+    }
+
+    .intro-text h2,
+
+    .legacy h2 {
+
+        font-size: 38px;
+
+    }
+
+    .legacy {
+
+        padding: 70px 7%;
+
+    }
+
+    .legacy-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .closing {
+
+        padding: 70px 20px;
+
+    }
+
+    .closing p {
+
+        font-size: 22px;
+
+    }
+
+}
+/* =========================
+
+   PAGE HERO
+
+========================= */
+
+.page-hero {
+
+    min-height: 55vh;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(25, 22, 19, 0.55),
+
+            rgba(25, 22, 19, 0.65)
+
+        ),
+
+        url("../images/photo1.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 120px 20px 60px;
+
+}
+
+.page-hero h1 {
+
+    font-size: clamp(50px, 8vw, 85px);
+
+    font-weight: normal;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+}
+
+.page-hero p:last-child {
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+}
+
+/* =========================
+
+   STORY SECTION
+
+========================= */
+
+.story-section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 110px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+.story-image img {
+
+    width: 100%;
+
+    display: block;
+
+    max-height: 600px;
+
+    object-fit: cover;
+
+}
+
+.story-content h2 {
+
+    font-size: 46px;
+
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+}
+
+.story-content p:not(.section-label) {
+
+    color: #625e58;
+
+    margin-bottom: 18px;
+
+}
+
+/* =========================
+
+   ACHIEVEMENTS
+
+========================= */
+
+.achievements {
+
+    background: #ebe6de;
+
+    padding: 100px 7%;
+
+}
+
+.achievement-heading {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+.achievement-heading h2 {
+
+    font-size: 46px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+
+}
+
+.achievement-heading > p:last-child {
+
+    color: #625e58;
+
+}
+
+.achievement-list {
+
+    max-width: 900px;
+
+    margin: 60px auto 0;
+
+}
+
+.achievement {
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    padding: 35px 0;
+
+    border-top: 1px solid #cfc8bd;
+
+}
+
+.achievement:last-child {
+
+    border-bottom: 1px solid #cfc8bd;
+
+}
+
+.achievement span {
+
+    color: #96724d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    padding-top: 5px;
+
+}
+
+.achievement h3 {
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin-bottom: 8px;
+
+}
+
+.achievement p {
+
+    color: #625e58;
+
+}
+
+/* =========================
+
+   LEGACY STORY
+
+========================= */
+
+.legacy-story {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 110px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+}
+
+.legacy-story h2 {
+
+    font-size: 45px;
+
+    font-weight: normal;
+
+    line-height: 1.2;
+
+}
+
+.legacy-story p {
+
+    color: #625e58;
+
+    margin-bottom: 20px;
+
+}
+
+/* =========================
+
+   STORY PHOTO
+
+========================= */
+
+.story-photo {
+
+    width: 100%;
+
+}
+
+.story-photo img {
+
+    width: 100%;
+
+    height: 600px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+/* =========================
+
+   MOBILE STORY PAGE
+
+========================= */
+
+@media (max-width: 768px) {
+
+    .page-hero {
+
+        min-height: 50vh;
+
+    }
+
+    .story-section {
+
+        grid-template-columns: 1fr;
+
+        padding: 70px 7%;
+
+        gap: 40px;
+
+    }
+
+    .story-content h2,
+
+    .achievement-heading h2,
+
+    .legacy-story h2 {
+
+        font-size: 37px;
+
+    }
+
+    .achievements {
+
+        padding: 70px 7%;
+
+    }
+
+    .achievement {
+
+        grid-template-columns: 40px 1fr;
+
+        gap: 15px;
+
+    }
+
+    .legacy-story {
+
+        grid-template-columns: 1fr;
+
+        padding: 70px 7%;
+
+        gap: 35px;
+
+    }
+
+    .story-photo img {
+
+        height: 400px;
+
+    }
+
+}
+/* =========================
+
+   DONATION PAGE
+
+========================= */
+
+.donation-section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 110px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+.donation-intro h2 {
+
+    font-size: 48px;
+
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+}
+
+.donation-intro p:not(.section-label) {
+
+    color: #625e58;
+
+    margin-bottom: 18px;
+
+    max-width: 550px;
+
+}
+
+/* DONATION CARD */
+
+.donation-card {
+
+    background: #ebe6de;
+
+    padding: 45px;
+
+    text-align: center;
+
+}
+
+.donation-card h3 {
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+
+}
+
+.currency-label {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    color: #777;
+
+    margin-bottom: 8px;
+
+}
+
+.amount-input {
+
+    display: flex;
+
+    align-items: center;
+
+    background: white;
+
+    border: 1px solid #d3cec6;
+
+    margin-bottom: 25px;
+
+}
+
+.amount-input span {
+
+    padding-left: 18px;
+
+    font-size: 20px;
+
+    color: #625e58;
+
+}
+
+.amount-input input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 16px;
+
+    font-size: 20px;
+
+    background: transparent;
+
+    font-family: Georgia, serif;
+
+}
+
+.donation-btn {
+
+    border: none;
+
+    cursor: pointer;
+
+    width: 100%;
+
+}
+
+/* =========================
+
+   PAYMENT SECTION
+
+========================= */
+
+.payment-section {
+
+    background: #ebe6de;
+
+    padding: 100px 7%;
+
+}
+
+.payment-card {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    background: #f8f6f2;
+
+    padding: 55px;
+
+    text-align: center;
+
+}
+
+.payment-card h2 {
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+
+}
+
+.bitcoin-box {
+
+    margin: 35px 0;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #d8d1c8;
+
+}
+
+.bitcoin-box h3 {
+
+    font-size: 20px;
+
+    font-weight: normal;
+
+    margin-bottom: 10px;
+
+}
+
+.bitcoin-note {
+
+    color: #777;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+.bitcoin-address {
+
+    display: flex;
+
+    align-items: stretch;
+
+    border: 1px solid #ccc;
+
+    background: #f8f6f2;
+
+}
+
+.bitcoin-address span {
+
+    flex: 1;
+
+    padding: 14px;
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    overflow-wrap: anywhere;
+
+    text-align: left;
+
+}
+
+.bitcoin-address button {
+
+    border: none;
+
+    background: #292621;
+
+    color: white;
+
+    padding: 0 20px;
+
+    cursor: pointer;
+
+}
+
+.payment-note {
+
+    color: #625e58;
+
+    margin-bottom: 25px;
+
+}
+
+.secondary-dark {
+
+    background: #292621;
+
+    color: white;
+
+}
+
+.secondary-dark:hover {
+
+    background: #44403a;
+
+}
+
+/* =========================
+
+   CONFIRMATION
+
+========================= */
+
+.confirmation-section {
+
+    padding: 110px 7%;
+
+}
+
+.confirmation-card {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+.confirmation-card h2 {
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+
+}
+
+.confirmation-card > p:not(.section-label) {
+
+    color: #625e58;
+
+    margin-bottom: 35px;
+
+}
+
+#donationForm {
+
+    text-align: left;
+
+}
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+.form-group label {
+
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+
+}
+
+.form-group input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ccc;
+
+    outline: none;
+
+    background: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+}
+
+.form-group input:focus {
+
+    border-color: #96724d;
+
+}
+
+#donationForm button {
+
+    border: none;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+}
+
+/* =========================
+
+   MOBILE DONATIONS
+
+========================= */
+
+@media (max-width: 768px) {
+
+    .donation-section {
+
+        grid-template-columns: 1fr;
+
+        padding: 70px 7%;
+
+        gap: 45px;
+
+    }
+
+    .donation-intro h2 {
+
+        font-size: 38px;
+
+    }
+
+    .donation-card {
+
+        padding: 30px 20px;
+
+    }
+
+    .payment-section {
+
+        padding: 70px 7%;
+
+    }
+
+    .payment-card {
+
+        padding: 35px 20px;
+
+    }
+
+    .payment-card h2,
+
+    .confirmation-card h2 {
+
+        font-size: 34px;
+
+    }
+
+    .bitcoin-address {
+
+        flex-direction: column;
+
+    }
+
+    .bitcoin-address button {
+
+        padding: 13px;
+
+    }
+
+    .confirmation-section {
+
+        padding: 70px 7%;
+
+    }
+
+}
+/* =========================
+
+   INVITATION PAGE
+
+========================= */
+
+.invitation-intro {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 110px 7% 70px;
+
+    text-align: center;
+
+}
+
+.invitation-intro h2 {
+
+    font-size: 46px;
+
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+}
+
+.invitation-intro p:not(.section-label) {
+
+    color: #625e58;
+
+    margin-bottom: 18px;
+
+}
+
+/* =========================
+
+   INVITATION PAYMENT
+
+========================= */
+
+.invitation-payment {
+
+    background: #ebe6de;
+
+    padding: 80px 7% 110px;
+
+}
+
+.invitation-card {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    background: #f8f6f2;
+
+    padding: 50px;
+
+    text-align: center;
+
+}
+
+.invitation-card h2 {
+
+    font-size: 65px;
+
+    font-weight: normal;
+
+    margin-bottom: 5px;
+
+}
+
+.fee-description {
+
+    color: #625e58;
+
+    margin-bottom: 30px;
+
+}
+
+/* PAYMENT OPTIONS */
+
+.payment-option {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #d5cfc6;
+
+    background: white;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+.payment-option:hover {
+
+    border-color: #96724d;
+
+}
+
+.payment-option input {
+
+    margin-top: 5px;
+
+    accent-color: #96724d;
+
+}
+
+.payment-option span {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+.payment-option strong {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+}
+
+.payment-option small {
+
+    color: #777;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+}
+
+/* PART PAYMENT */
+
+.part-payment-input {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: #ebe6de;
+
+    text-align: left;
+
+}
+
+.part-payment-input > label {
+
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+}
+
+.part-payment-input > small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #777;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+}
+
+.invitation-btn {
+
+    width: 100%;
+
+    border: none;
+
+    cursor: pointer;
+
+    margin-top: 25px;
+
+}
+
+/* =========================
+
+   MOBILE INVITATION
+
+========================= */
+
+@media (max-width: 768px) {
+
+    .invitation-intro {
+
+        padding: 70px 7% 50px;
+
+    }
+
+    .invitation-intro h2 {
+
+        font-size: 37px;
+
+    }
+
+    .invitation-payment {
+
+        padding: 60px 7% 70px;
+
+    }
+
+    .invitation-card {
+
+        padding: 35px 20px;
+
+    }
+
+    .invitation-card h2 {
+
+        font-size: 55px;
+
+    }
+
+}
+/* =========================
+
+   MOBILE NAVIGATION
+
+========================= */
+
+.menu-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    color: #292621;
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        height: 70px;
+
+        padding: 0 6%;
+
+        flex-direction: row;
+
+        position: absolute;
+
+    }
+
+    .logo {
+
+        font-size: 25px;
+
+    }
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+    .navbar nav {
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: #f8f6f2;
+
+        padding: 10px 6%;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    }
+
+    .navbar nav.show {
+
+        display: flex;
+
+    }
+
+    .navbar nav a {
+
+        padding: 14px 0;
+
+        border-bottom: 1px solid #e2ddd5;
+
+        font-size: 13px;
+
+    }
+
+    .navbar nav a:last-child {
+
+        border-bottom: none;
+
+    }
+
+}
+/* =========================
+
+   WIDE MEMORIAL PHOTO
+
+========================= */
+
+.wide-photo {
+
+    width: 120%;
+
+    overflow: hidden;
+
+}
+
+.wide-photo img {
+
+    width: 120%;
+
+    height: 600px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+/* =========================
+
+   DONATION PHOTO
+
+========================= */
+
+.donation-photo {
+
+    width: 100%;
+
+    height: 420px;
+
+    overflow: hidden;
+
+}
+
+.donation-photo img {
+
+    width: 100%;
+
+    height: 200%;
+
+    object-fit: cover;
+
+    object-position: center 50%;
+
+    display: block;
+
+}
